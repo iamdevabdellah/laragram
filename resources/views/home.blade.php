@@ -16,9 +16,9 @@
                 <div class="pr-4"><strong>4,914</strong> followers</div>
                 <div class="pr-4"><strong>2</strong> following</div>
             </div>
-            <div class="pt-4 font-weight-bold" >Laravel News</div>
-            <div>Follow and stay up to date with the #Laravel #PHP framework in short tips and news items. By <a href="#">@ericlbarnes</a></div>
-            <div class="font-weight-bold"><a href="#">laravel-news.com</a></div>
+            <div class="pt-4 font-weight-bold" >{{ $user->profile->title }}</div>
+            <div>{{ $user->profile->description }}</div>
+            <div class="font-weight-bold"><a href="#">{{ $user->profile->url }}</a></div>
         </div>
     </div>
     <div class="row pt-5">
