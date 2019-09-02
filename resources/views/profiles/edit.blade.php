@@ -20,8 +20,8 @@
                             type="text" 
                             class="form-control{{ $errors->has('title') ? 'is-invalid' : ''}}"
                             name="title" 
-                            value="{{ old('title') }}" 
-                            autocomplete="caption" autofocus>
+                            value="{{ old('title') ?? $user->profile->title }}" 
+                            autocomplete="title" autofocus>
         
                         @if ($errors->has('title'))
                             <span class="invalid-feedback" role="alert">
@@ -38,8 +38,8 @@
                             type="text" 
                             class="form-control{{ $errors->has('description') ? 'is-invalid' : ''}}"
                             name="description" 
-                            value="{{ old('description') }}" 
-                            autocomplete="caption" autofocus>
+                            value="{{ old('description') ?? $user->profile->description }}" 
+                            autocomplete="description" autofocus>
         
                         @if ($errors->has('description'))
                             <span class="invalid-feedback" role="alert">
@@ -56,8 +56,8 @@
                             type="text" 
                             class="form-control{{ $errors->has('url') ? 'is-invalid' : ''}}"
                             name="url" 
-                            value="{{ old('url') }}" 
-                            autocomplete="caption" autofocus>
+                            value="{{ old('url') ?? $user->profile->url }}" 
+                            autocomplete="url" autofocus>
         
                         @if ($errors->has('url'))
                             <span class="invalid-feedback" role="alert">
@@ -77,7 +77,7 @@
                     </div>
     
                     <div class="row pt-4">
-                        <button class="btn btn-primary btn-sm">Add Post</button>
+                        <button class="btn btn-primary btn-sm">Save Post</button>
                     </div>
         
                 </div>
