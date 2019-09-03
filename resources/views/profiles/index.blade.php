@@ -8,7 +8,13 @@
         </div>
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">
-                <h1 class="pr-4">{{ $user->username }}</h1>    
+                <div class="d-flex align-items-center">
+                    <div class="h3 pr-4">{{ $user->username }}</div> 
+            
+                    <button class="btn btn-primary btn-sm">Follow</button>
+                </div>
+
+
                 @can('update', $user->profile)
                     <a href="/p/create" class="btn btn-primary btn-sm">Add New Post</a>
                 @endcan
